@@ -130,7 +130,7 @@ class CommentsController: UICollectionViewController, UICollectionViewDelegateFl
     
     @objc func handleSubmit() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        print("post id:", self.post?.id)
+        print("post id:", self.post?.id ?? "")
         
         print("Inserting Submit", commentTextField.text ?? "")
         
